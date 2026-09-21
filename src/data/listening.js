@@ -1,0 +1,51 @@
+export const listeningPhrases = [
+  // Greetings
+  { id: 1, category: 'Greetings', jp: 'おはようございます', romaji: 'Ohayou gozaimasu', en: 'Good morning (formal)' },
+  { id: 2, category: 'Greetings', jp: 'こんにちは', romaji: 'Konnichiwa', en: 'Hello / Good afternoon' },
+  { id: 3, category: 'Greetings', jp: 'こんばんは', romaji: 'Konbanwa', en: 'Good evening' },
+  { id: 4, category: 'Greetings', jp: 'おやすみなさい', romaji: 'Oyasuminasai', en: 'Good night' },
+  { id: 5, category: 'Greetings', jp: 'さようなら', romaji: 'Sayounara', en: 'Goodbye' },
+  { id: 6, category: 'Greetings', jp: 'はじめまして', romaji: 'Hajimemashite', en: 'Nice to meet you (first time)' },
+  { id: 7, category: 'Greetings', jp: 'よろしくおねがいします', romaji: 'Yoroshiku onegaishimasu', en: 'Please treat me well / Nice to meet you' },
+  { id: 8, category: 'Greetings', jp: 'ありがとうございます', romaji: 'Arigatou gozaimasu', en: 'Thank you very much' },
+  { id: 9, category: 'Greetings', jp: 'すみません', romaji: 'Sumimasen', en: 'Excuse me / I\'m sorry' },
+  { id: 10, category: 'Greetings', jp: 'どういたしまして', romaji: 'Dou itashimashite', en: 'You\'re welcome' },
+  // Numbers
+  { id: 11, category: 'Numbers', jp: 'いち', romaji: 'ichi', en: '1 (one)' },
+  { id: 12, category: 'Numbers', jp: 'に', romaji: 'ni', en: '2 (two)' },
+  { id: 13, category: 'Numbers', jp: 'さん', romaji: 'san', en: '3 (three)' },
+  { id: 14, category: 'Numbers', jp: 'し・よん', romaji: 'shi / yon', en: '4 (four)' },
+  { id: 15, category: 'Numbers', jp: 'ご', romaji: 'go', en: '5 (five)' },
+  { id: 16, category: 'Numbers', jp: 'ろく', romaji: 'roku', en: '6 (six)' },
+  { id: 17, category: 'Numbers', jp: 'しち・なな', romaji: 'shichi / nana', en: '7 (seven)' },
+  { id: 18, category: 'Numbers', jp: 'はち', romaji: 'hachi', en: '8 (eight)' },
+  { id: 19, category: 'Numbers', jp: 'く・きゅう', romaji: 'ku / kyuu', en: '9 (nine)' },
+  { id: 20, category: 'Numbers', jp: 'じゅう', romaji: 'juu', en: '10 (ten)' },
+  // Common Phrases
+  { id: 21, category: 'Common Phrases', jp: 'わかりました', romaji: 'Wakarimashita', en: 'I understand / Got it' },
+  { id: 22, category: 'Common Phrases', jp: 'わかりません', romaji: 'Wakarimasen', en: 'I don\'t understand' },
+  { id: 23, category: 'Common Phrases', jp: 'もう一度言ってください', romaji: 'Mou ichido itte kudasai', en: 'Please say it one more time' },
+  { id: 24, category: 'Common Phrases', jp: 'ゆっくり話してください', romaji: 'Yukkuri hanashite kudasai', en: 'Please speak slowly' },
+  { id: 25, category: 'Common Phrases', jp: 'トイレはどこですか', romaji: 'Toire wa doko desu ka', en: 'Where is the restroom?' },
+  { id: 26, category: 'Common Phrases', jp: 'いくらですか', romaji: 'Ikura desu ka', en: 'How much is it?' },
+  { id: 27, category: 'Common Phrases', jp: 'おねがいします', romaji: 'Onegaishimasu', en: 'Please (requesting a favor)' },
+  { id: 28, category: 'Common Phrases', jp: 'だいじょうぶです', romaji: 'Daijoubu desu', en: 'I\'m fine / It\'s okay' },
+  // Days
+  { id: 29, category: 'Days', jp: '月曜日', romaji: 'Getsuyoubi', en: 'Monday' },
+  { id: 30, category: 'Days', jp: '火曜日', romaji: 'Kayoubi', en: 'Tuesday' },
+  { id: 31, category: 'Days', jp: '水曜日', romaji: 'Suiyoubi', en: 'Wednesday' },
+  { id: 32, category: 'Days', jp: '木曜日', romaji: 'Mokuyoubi', en: 'Thursday' },
+  { id: 33, category: 'Days', jp: '金曜日', romaji: 'Kin\'youbi', en: 'Friday' },
+  { id: 34, category: 'Days', jp: '土曜日', romaji: 'Doyoubi', en: 'Saturday' },
+  { id: 35, category: 'Days', jp: '日曜日', romaji: 'Nichiyoubi', en: 'Sunday' },
+  // Colors
+  { id: 36, category: 'Colors', jp: '赤', romaji: 'aka', en: 'Red' },
+  { id: 37, category: 'Colors', jp: '青', romaji: 'ao', en: 'Blue' },
+  { id: 38, category: 'Colors', jp: '緑', romaji: 'midori', en: 'Green' },
+  { id: 39, category: 'Colors', jp: '黄色', romaji: 'kiiro', en: 'Yellow' },
+  { id: 40, category: 'Colors', jp: '白', romaji: 'shiro', en: 'White' },
+  { id: 41, category: 'Colors', jp: '黒', romaji: 'kuro', en: 'Black' },
+  { id: 42, category: 'Colors', jp: 'ピンク', romaji: 'pinku', en: 'Pink' },
+];
+
+export const listeningCategories = ['All', 'Greetings', 'Numbers', 'Common Phrases', 'Days', 'Colors'];
