@@ -1,27 +1,51 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
-import Home from './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { AppProvider } from './context/AppContext';
 import Navbar from './app/Header';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import Sidebar from './app/Sidebar';
 import Footer from './app/Footer';
+import Home from './components/Home';
+import HiraganaPage from './pages/HiraganaPage';
+import KatakanaPage from './pages/KatakanaPage';
+import VocabularyPage from './pages/VocabularyPage';
+import GrammarPage from './pages/GrammarPage';
+import KanjiQuizPage from './pages/KanjiQuizPage';
+import ExamPage from './pages/ExamPage';
+import ListeningPage from './pages/ListeningPage';
 
 const App = () => (
-  <Router>
-    <div className="app-container">
-      <Navbar />
-      <div className="main-content container mt-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/beginner" element={<div>初心者のページ</div>} />
-          <Route path="/intermediate" element={<div>中級のページ</div>} />
-          <Route path="/advanced" element={<div>上級のページ</div>} />
-        </Routes>
+  <AppProvider>
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <div className="app-body">
+          <Sidebar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/hiragana" element={<HiraganaPage />} />
+              <Route path="/katakana" element={<KatakanaPage />} />
+              <Route path="/vocabulary" element={<VocabularyPage />} />
+              <Route path="/grammar" element={<GrammarPage />} />
+              <Route path="/kanji-quiz" element={<KanjiQuizPage />} />
+              <Route path="/exam" element={<ExamPage />} />
+              <Route path="/listening" element={<ListeningPage />} />
+              <Route path="*" element={
+                <div className="not-found">
+                  <h2>404 — Page Not Found</h2>
+                  <p>この页面は存在しません。 <a href="/">Go Home</a></p>
+                </div>
+              } />
+            </Routes>
+          </main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  </Router>
+    </Router>
+  </AppProvider>
 );
 
 export default App;
