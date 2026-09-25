@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { examSections } from '../data/exam';
 import { useApp } from '../context/AppContext';
 
@@ -27,7 +27,7 @@ const ExamPage = () => {
       });
     }, 1000);
     return () => clearInterval(timer);
-  }, [phase, sectionIdx]);
+  },  [phase, sectionIdx, section.timeLimit]);
 
   const handleAnswer = (qId, answer) => {
     if (timesUp) return;
