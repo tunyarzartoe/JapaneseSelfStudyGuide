@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import { useApp } from '../context/AppContext';
+import { NavLink } from 'react-router-dom';
 
 const navItems = [
   { path: '/', label: 'Home', jp: 'ホーム', icon: '🏠', exact: true },
@@ -15,7 +14,6 @@ const navItems = [
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const { darkMode } = useApp();
 
   return (
     <aside className={`main_sidebar ${collapsed ? 'collapsed' : ''}`}>
