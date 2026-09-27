@@ -58,8 +58,17 @@ body {
 
 h1,h2,h3,h4,h5,h6 { font-family: 'Roboto', 'Noto Sans JP', sans-serif; color: var(--text); }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+/* Links / touch interaction */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+a:hover { text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a:active { opacity: 0.75; }
 
 /* ========================================
    APP LAYOUT
@@ -220,6 +229,8 @@ a:hover { text-decoration: underline; }
   transition: background var(--transition);
 }
 .mobile-menu-link:hover { background: var(--bg3); text-decoration: none; }
+.mobile-menu-link:active { background: var(--border); color: var(--primary); transform: scale(0.99); }
+.mobile-menu-link:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .mobile-menu-link.active { color: var(--primary); font-weight: 600; }
 
 /* Backdrop */
@@ -349,7 +360,7 @@ a:hover { text-decoration: underline; }
   gap: 16px;
   justify-content: center;
 }
-.footer-links a { color: rgba(241,250,238,0.7); font-size: 0.85rem; transition: color var(--transition); }
+.footer-links a { color: rgba(241,250,238,0.7); font-size: 0.85rem; transition: color var(--transition); text-decoration: none; }
 .footer-links a:hover { color: #fff; text-decoration: none; }
 
 .footer-copy { font-size: 0.8rem; opacity: 0.6; }
