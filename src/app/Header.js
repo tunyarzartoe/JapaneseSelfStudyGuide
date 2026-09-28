@@ -38,7 +38,13 @@ const Navbar = () => {
         <div className="container-fluid px-lg-4 navbar-inner">
           {/* Logo */}
           <Link to="/" className="navbar__logo">
-            <span className="logo-char">日</span>
+            <img
+              src={`${process.env.PUBLIC_URL}/favicon-256.png`}
+              alt="Japanese Self-Study Guide logo"
+              className="logo-img"
+              width="42"
+              height="42"
+            />
             <div className="logo-text">
               <span className="logo-main">学習ガイド</span>
               <span className="logo-sub">Japanese Self-Study</span>
