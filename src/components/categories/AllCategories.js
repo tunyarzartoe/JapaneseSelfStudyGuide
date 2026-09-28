@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 import categories from '../../dummy/categories.json'; 
 
 const AllCategories = () => {
@@ -10,25 +9,20 @@ const AllCategories = () => {
   };
 
   return (
-    <>
+    <div className="categories-wrapper">
       <div className="categories-container container">
         {categories.map((category) => (
-          <Button
+          <button
             key={category.id}
-            size="sm"
-            className="category-btn"
+            type="button"
+            className={`category-pill ${selectedCategory === category.id ? 'active' : ''}`}
             onClick={() => handleCategoryClick(category.id)}
-            style={{
-              background: selectedCategory === category.id ? "#007bff" : "#E0E0E0",
-              borderColor: "#eee",
-              color: selectedCategory === category.id ? "#fff" : "#2d2d2d",
-            }}
           >
             {category.name}
-          </Button>
+          </button>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
