@@ -41,6 +41,25 @@ export const katakana = [
   // Semi-voiced
   { char: 'パ', romaji: 'pa' }, { char: 'ピ', romaji: 'pi' }, { char: 'プ', romaji: 'pu' },
   { char: 'ペ', romaji: 'pe' }, { char: 'ポ', romaji: 'po' },
+  // Yōon (combination sounds)
+  { char: 'キャ', romaji: 'kya' }, { char: 'キュ', romaji: 'kyu' }, { char: 'キョ', romaji: 'kyo' },
+  { char: 'シャ', romaji: 'sha' }, { char: 'シュ', romaji: 'shu' }, { char: 'ショ', romaji: 'sho' },
+  { char: 'チャ', romaji: 'cha' }, { char: 'チュ', romaji: 'chu' }, { char: 'チョ', romaji: 'cho' },
+  { char: 'ニャ', romaji: 'nya' }, { char: 'ニュ', romaji: 'nyu' }, { char: 'ニョ', romaji: 'nyo' },
+  { char: 'ヒャ', romaji: 'hya' }, { char: 'ヒュ', romaji: 'hyu' }, { char: 'ヒョ', romaji: 'hyo' },
+  { char: 'ミャ', romaji: 'mya' }, { char: 'ミュ', romaji: 'myu' }, { char: 'ミョ', romaji: 'myo' },
+  { char: 'リャ', romaji: 'rya' }, { char: 'リュ', romaji: 'ryu' }, { char: 'リョ', romaji: 'ryo' },
+  { char: 'ギャ', romaji: 'gya' }, { char: 'ギュ', romaji: 'gyu' }, { char: 'ギョ', romaji: 'gyo' },
+  { char: 'ジャ', romaji: 'ja' }, { char: 'ジュ', romaji: 'ju' }, { char: 'ジョ', romaji: 'jo' },
+  { char: 'ビャ', romaji: 'bya' }, { char: 'ビュ', romaji: 'byu' }, { char: 'ビョ', romaji: 'byo' },
+  { char: 'ピャ', romaji: 'pya' }, { char: 'ピュ', romaji: 'pyu' }, { char: 'ピョ', romaji: 'pyo' },
+  // Extended katakana (for foreign loanwords)
+  { char: 'ファ', romaji: 'fa' }, { char: 'フィ', romaji: 'fi' }, { char: 'フェ', romaji: 'fe' }, { char: 'フォ', romaji: 'fo' },
+  { char: 'ティ', romaji: 'ti' }, { char: 'ディ', romaji: 'di' }, { char: 'トゥ', romaji: 'tu' }, { char: 'ドゥ', romaji: 'du' },
+  { char: 'ウィ', romaji: 'wi' }, { char: 'ウェ', romaji: 'we' }, { char: 'ウォ', romaji: 'wo' }, { char: 'ツァ', romaji: 'tsa' },
+  { char: 'ツィ', romaji: 'tsi' }, { char: 'ツェ', romaji: 'tse' }, { char: 'ツォ', romaji: 'tso' }, { char: 'ヴ', romaji: 'vu' },
+  { char: 'ヴァ', romaji: 'va' }, { char: 'ヴィ', romaji: 'vi' }, { char: 'ヴェ', romaji: 've' }, { char: 'ヴォ', romaji: 'vo' },
+  { char: 'シェ', romaji: 'she' }, { char: 'ジェ', romaji: 'je' }, { char: 'チェ', romaji: 'che' },
 ];
 
 export const katakanaGroups = [
@@ -60,4 +79,22 @@ export const katakanaGroups = [
   { label: 'Voiced ダ行', chars: ['ダ','ヂ','ヅ','デ','ド'] },
   { label: 'Voiced バ行', chars: ['バ','ビ','ブ','ベ','ボ'] },
   { label: 'Semi-voiced パ行', chars: ['パ','ピ','プ','ペ','ポ'] },
+
+  { label: 'Combo キャ行', chars: ['キャ','キュ','キョ'] },
+  { label: 'Combo シャ行', chars: ['シャ','シュ','ショ'] },
+  { label: 'Combo チャ行', chars: ['チャ','チュ','チョ'] },
+  { label: 'Combo ニャ行', chars: ['ニャ','ニュ','ニョ'] },
+  { label: 'Combo ヒャ行', chars: ['ヒャ','ヒュ','ヒョ'] },
+  { label: 'Combo ミャ行', chars: ['ミャ','ミュ','ミョ'] },
+  { label: 'Combo リャ行', chars: ['リャ','リュ','リョ'] },
+  { label: 'Voiced combo ギャ行', chars: ['ギャ','ギュ','ギョ'] },
+  { label: 'Voiced combo ジャ行', chars: ['ジャ','ジュ','ジョ'] },
+  { label: 'Voiced combo ビャ行', chars: ['ビャ','ビュ','ビョ'] },
+  { label: 'Semi-voiced combo ピャ行', chars: ['ピャ','ピュ','ピョ'] },
+  { label: 'Extended ファ行', chars: ['ファ','フィ','フェ','フォ'] },
+  { label: 'Extended ティ/ディ/トゥ/ドゥ', chars: ['ティ','ディ','トゥ','ドゥ'] },
+  { label: 'Extended ウィ行', chars: ['ウィ','ウェ','ウォ'] },
+  { label: 'Extended ツァ行', chars: ['ツァ','ツィ','ツェ','ツォ'] },
+  { label: 'Extended ヴ行', chars: ['ヴ','ヴァ','ヴィ','ヴェ','ヴォ'] },
+  { label: 'Extended シェ/ジェ/チェ', chars: ['シェ','ジェ','チェ'] },
 ];
