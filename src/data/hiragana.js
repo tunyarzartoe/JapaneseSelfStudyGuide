@@ -41,6 +41,18 @@ export const hiragana = [
   // Handakuten
   { char: 'ぱ', romaji: 'pa' }, { char: 'ぴ', romaji: 'pi' }, { char: 'ぷ', romaji: 'pu' },
   { char: 'ぺ', romaji: 'pe' }, { char: 'ぽ', romaji: 'po' },
+  // Yōon (combination sounds)
+  { char: 'きゃ', romaji: 'kya' }, { char: 'きゅ', romaji: 'kyu' }, { char: 'きょ', romaji: 'kyo' },
+  { char: 'しゃ', romaji: 'sha' }, { char: 'しゅ', romaji: 'shu' }, { char: 'しょ', romaji: 'sho' },
+  { char: 'ちゃ', romaji: 'cha' }, { char: 'ちゅ', romaji: 'chu' }, { char: 'ちょ', romaji: 'cho' },
+  { char: 'にゃ', romaji: 'nya' }, { char: 'にゅ', romaji: 'nyu' }, { char: 'にょ', romaji: 'nyo' },
+  { char: 'ひゃ', romaji: 'hya' }, { char: 'ひゅ', romaji: 'hyu' }, { char: 'ひょ', romaji: 'hyo' },
+  { char: 'みゃ', romaji: 'mya' }, { char: 'みゅ', romaji: 'myu' }, { char: 'みょ', romaji: 'myo' },
+  { char: 'りゃ', romaji: 'rya' }, { char: 'りゅ', romaji: 'ryu' }, { char: 'りょ', romaji: 'ryo' },
+  { char: 'ぎゃ', romaji: 'gya' }, { char: 'ぎゅ', romaji: 'gyu' }, { char: 'ぎょ', romaji: 'gyo' },
+  { char: 'じゃ', romaji: 'ja' }, { char: 'じゅ', romaji: 'ju' }, { char: 'じょ', romaji: 'jo' },
+  { char: 'びゃ', romaji: 'bya' }, { char: 'びゅ', romaji: 'byu' }, { char: 'びょ', romaji: 'byo' },
+  { char: 'ぴゃ', romaji: 'pya' }, { char: 'ぴゅ', romaji: 'pyu' }, { char: 'ぴょ', romaji: 'pyo' },
 ];
 
 export const hiraganaGroups = [
@@ -60,4 +72,16 @@ export const hiraganaGroups = [
   { label: 'Voiced だ行', chars: ['だ','ぢ','づ','で','ど'] },
   { label: 'Voiced ば行', chars: ['ば','び','ぶ','べ','ぼ'] },
   { label: 'Semi-voiced ぱ行', chars: ['ぱ','ぴ','ぷ','ぺ','ぽ'] },
+
+  { label: 'Combo きゃ行', chars: ['きゃ','きゅ','きょ'] },
+  { label: 'Combo しゃ行', chars: ['しゃ','しゅ','しょ'] },
+  { label: 'Combo ちゃ行', chars: ['ちゃ','ちゅ','ちょ'] },
+  { label: 'Combo にゃ行', chars: ['にゃ','にゅ','にょ'] },
+  { label: 'Combo ひゃ行', chars: ['ひゃ','ひゅ','ひょ'] },
+  { label: 'Combo みゃ行', chars: ['みゃ','みゅ','みょ'] },
+  { label: 'Combo りゃ行', chars: ['りゃ','りゅ','りょ'] },
+  { label: 'Voiced combo ぎゃ行', chars: ['ぎゃ','ぎゅ','ぎょ'] },
+  { label: 'Voiced combo じゃ行', chars: ['じゃ','じゅ','じょ'] },
+  { label: 'Voiced combo びゃ行', chars: ['びゃ','びゅ','びょ'] },
+  { label: 'Semi-voiced combo ぴゃ行', chars: ['ぴゃ','ぴゅ','ぴょ'] },
 ];
