@@ -32,6 +32,30 @@ const Navbar = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Mobile menu: close on Escape, lock page scroll while open,
+  // and auto-close when the screen grows back to desktop width
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false);
+    };
+    const handleResize = () => {
+      if (window.innerWidth > 960) setMobileMenuOpen(false);
+    };
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleEsc);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', handleEsc);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       <header className="navbar-top">
@@ -73,6 +97,7 @@ const Navbar = () => {
               className="navbar-search-trigger"
               onClick={() => setIsSearchOpen(true)}
               title="Search Guide (⌘K or Ctrl+K)"
+              aria-label="Search"
             >
               <span className="search-trigger-icon">🔍</span>
               <span className="search-trigger-text">Search anything...</span>
@@ -112,6 +137,8 @@ const Navbar = () => {
               className="navbar__menu-btn"
               onClick={() => setMobileMenuOpen(o => !o)}
               aria-label="Toggle Navigation"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-nav-panel"
             >
               {isMobileMenuOpen ? '✕' : '☰'}
             </button>
@@ -120,7 +147,7 @@ const Navbar = () => {
 
         {/* Mobile Slide-down Menu */}
         {isMobileMenuOpen && (
-          <div className="mobile-nav-panel">
+          <div className="mobile-nav-panel" id="mobile-nav-panel">
             {navItems.map(item => (
               <NavLink
                 key={item.path}
