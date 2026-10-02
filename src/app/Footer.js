@@ -47,7 +47,6 @@ const Footer = () => (
         </p>
       </div>
 
-      {/* Tabs, grouped */}
       <nav className="footer-nav" aria-label="Footer">
         {footerGroups.map(group => (
           <div className="footer-group" key={group.title}>
@@ -73,7 +72,6 @@ const Footer = () => (
         ))}
       </nav>
 
-      {/* Bottom bar */}
       <div className="footer-bottom">
         <div className="footer-copy">
           © {new Date().getFullYear()} 学習ガイド — Built for Japanese learners worldwide 🇯🇵
