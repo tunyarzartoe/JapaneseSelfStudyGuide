@@ -6,6 +6,7 @@ import { grammar } from '../data/grammar';
 import { hiragana } from '../data/hiragana';
 import { katakana } from '../data/katakana';
 import { listeningPhrases } from '../data/listening';
+import { oldPastQuestions } from '../data/exam';
 
 const speak = (text) => {
   if ('speechSynthesis' in window) {
@@ -19,6 +20,7 @@ const speak = (text) => {
 
 const CATEGORIES = [
   { id: 'all', label: 'All Results' },
+  { id: 'exam', label: '📋 JLPT 過去問' },
   { id: 'vocab', label: '📖 Vocab' },
   { id: 'kanji', label: '漢 Kanji' },
   { id: 'grammar', label: '📝 Grammar' },
@@ -60,6 +62,23 @@ const GlobalSearch = ({ isOpen, onClose }) => {
   // Prepare searchable dataset
   const allItems = useMemo(() => {
     const items = [];
+
+    // Past Exam Questions (過去問)
+    oldPastQuestions.forEach(pq => {
+      items.push({
+        id: `pq-${pq.id}`,
+        type: 'exam',
+        typeLabel: `${pq.level} 過去問`,
+        badgeColor: '#e11d48',
+        title: pq.question,
+        subtitle: `${pq.year} • ${pq.category}`,
+        meaning: `Answer: ${pq.answer} (${pq.questionEn})`,
+        level: pq.level,
+        path: '/exam',
+        audioText: pq.passage || pq.question,
+        searchString: `${pq.question} ${pq.questionEn} ${pq.answer} ${pq.year} ${pq.category} ${pq.level} 過去問`.toLowerCase()
+      });
+    });
 
     // Vocabulary
     vocabulary.forEach(v => {
@@ -179,13 +198,12 @@ const GlobalSearch = ({ isOpen, onClose }) => {
     }
 
     if (!q) {
-      // Suggest top popular items
-      return results.slice(0, 8);
+      return results.slice(0, 10);
     }
 
     return results
       .filter(item => item.searchString.includes(q))
-      .slice(0, 25);
+      .slice(0, 30);
   }, [allItems, query, activeCategory]);
 
   const handleSelect = (item) => {
@@ -220,7 +238,7 @@ const GlobalSearch = ({ isOpen, onClose }) => {
             ref={inputRef}
             type="text"
             className="search-modal-input"
-            placeholder="Search Kanji, Kana, Vocab, Grammar, Romaji, English..."
+            placeholder="Search N1–N5 JLPT, Kanji, 過去問, Grammar, Vocab, Romaji..."
             value={query}
             onChange={e => {
               setQuery(e.target.value);
@@ -297,7 +315,7 @@ const GlobalSearch = ({ isOpen, onClose }) => {
             <div className="search-empty-state">
               <span className="search-empty-icon">🏮</span>
               <h6>No Japanese results found for "{query}"</h6>
-              <p>Try searching for words like "食べる", "water", "N5", "dog", "ta-form", or romaji.</p>
+              <p>Try searching for "N1", "是正", "たるもの", "2023", "water", or romaji.</p>
             </div>
           )}
         </div>

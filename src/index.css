@@ -827,10 +827,11 @@ a:hover {
   letter-spacing: 0.5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
-.badge-level.n5 { background: linear-gradient(135deg, #10b981, #059669); }
-.badge-level.n4 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.badge-level.n1 { background: linear-gradient(135deg, #e11d48, #be123c); }
+.badge-level.n2 { background: linear-gradient(135deg, #ea580c, #c2410c); }
 .badge-level.n3 { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
-.badge-level.n2 { background: linear-gradient(135deg, #ec4899, #be185d); }
+.badge-level.n4 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.badge-level.n5 { background: linear-gradient(135deg, #10b981, #059669); }
 
 .hero-char {
   font-size: 10rem;
@@ -2009,6 +2010,265 @@ a:hover {
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(var(--brand-rgb), 0.45);
+}
+
+/* ========================================================
+   JLPT EXAMS & PAST QUESTIONS (過去問) ENHANCEMENTS
+   ======================================================== */
+.exam-mode-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.jlpt-level-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.jlpt-bar-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text3);
+  margin-right: 4px;
+}
+
+.jlpt-level-tab {
+  padding: 6px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg3);
+  color: var(--text2);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.jlpt-level-tab:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.jlpt-level-tab.active {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exam-level-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+}
+
+.audio-small-btn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition);
+}
+
+.audio-small-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.eq-passage {
+  background: var(--bg3);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.review-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 16px 20px;
+  border-left: 5px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.review-card.correct-border {
+  border-left-color: #10b981;
+}
+
+.review-card.wrong-border {
+  border-left-color: #f43f5e;
+}
+
+.explanation-box {
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.5;
+  border-left: 3px solid #3b82f6;
+}
+
+/* Past Questions View */
+.past-question-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+}
+
+.past-question-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.pq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pq-year {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--bg3);
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.pq-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text3);
+}
+
+.bookmark-btn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.bookmark-btn:hover, .bookmark-btn.active {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #fff;
+}
+
+.pq-question-text {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.5;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.pq-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.pq-opt-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg3);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.pq-opt-btn:hover:not(.correct):not(.wrong):not(.dimmed) {
+  border-color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.08);
+  transform: translateY(-1px);
+}
+
+.pq-opt-btn.correct {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
+.pq-opt-btn.wrong {
+  background: linear-gradient(135deg, #f43f5e, #e11d48) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.35);
+}
+
+.pq-opt-btn.dimmed {
+  opacity: 0.45;
+}
+
+.pq-opt-num {
+  font-size: 0.8rem;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pq-explanation {
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.pq-explanation.correct-exp {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--text);
+}
+
+.pq-explanation.wrong-exp {
+  background: rgba(244, 63, 94, 0.1);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: var(--text);
 }
 
 /* ========================================================

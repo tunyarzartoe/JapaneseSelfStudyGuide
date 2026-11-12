@@ -6,13 +6,13 @@ const Home = () => {
   const { progress } = useApp();
 
   const sections = [
-    { path: '/hiragana', label: 'Hiragana', jp: 'ひらがな', icon: 'あ', color: 'linear-gradient(135deg, #ff6b6b, #ee5253)', desc: 'Learn all 46+ hiragana characters with practice.' },
-    { path: '/katakana', label: 'Katakana', jp: 'カタカナ', icon: 'ア', color: 'linear-gradient(135deg, #ff9f43, #f368e0)', desc: 'Master katakana for foreign loanwords.' },
-    { path: '/vocabulary', label: 'Vocabulary', jp: '語彙', icon: '📖', color: 'linear-gradient(135deg, #10ac84, #1dd1a1)', desc: 'N5–N3 vocabulary with example sentences.' },
-    { path: '/grammar', label: 'Grammar', jp: '文法', icon: '📝', color: 'linear-gradient(135deg, #2e86de, #54a0ff)', desc: 'Key JLPT grammar patterns explained clearly.' },
-    { path: '/kanji-quiz', label: 'Kanji Quiz', jp: '漢字クイズ', icon: '漢', color: 'linear-gradient(135deg, #833471, #b53471)', desc: 'Quiz yourself on kanji readings and meanings.' },
-    { path: '/exam', label: 'Exam Practice', jp: '試験練習', icon: '📋', color: 'linear-gradient(135deg, #ea2027, #ee5253)', desc: 'Full JLPT mock exam with timer and results.' },
-    { path: '/listening', label: 'Listening', jp: 'リスニング', icon: '🎧', color: 'linear-gradient(135deg, #00d2d3, #01a3a4)', desc: 'Hear Japanese phrases and build listening skills.' },
+    { path: '/exam', label: 'JLPT Exam & 過去問', jp: '試験・過去問', icon: '📋', color: 'linear-gradient(135deg, #ea2027, #ee5253)', desc: 'JLPT N1–N5 mock exams & authentic past questions (過去問) with full explanations.' },
+    { path: '/kanji-quiz', label: 'Kanji Quiz', jp: '漢字クイズ', icon: '漢', color: 'linear-gradient(135deg, #833471, #b53471)', desc: 'JLPT N5–N1 kanji quizzes on readings, stroke counts, and meanings.' },
+    { path: '/vocabulary', label: 'Vocabulary', jp: '語彙', icon: '📖', color: 'linear-gradient(135deg, #10ac84, #1dd1a1)', desc: 'N5–N1 vocabulary bank with audio pronunciation & 3D flashcards.' },
+    { path: '/grammar', label: 'Grammar', jp: '文法', icon: '📝', color: 'linear-gradient(135deg, #2e86de, #54a0ff)', desc: 'Comprehensive JLPT N5–N1 grammar patterns with spoken examples.' },
+    { path: '/listening', label: 'Listening', jp: 'リスニング', icon: '🎧', color: 'linear-gradient(135deg, #00d2d3, #01a3a4)', desc: 'Practice Japanese listening with native speech for business, daily, & travel.' },
+    { path: '/hiragana', label: 'Hiragana', jp: 'ひらがな', icon: 'あ', color: 'linear-gradient(135deg, #ff6b6b, #ee5253)', desc: 'Master all 46+ hiragana characters with stroke audio pronunciation.' },
+    { path: '/katakana', label: 'Katakana', jp: 'カタカナ', icon: 'ア', color: 'linear-gradient(135deg, #ff9f43, #f368e0)', desc: 'Master katakana for foreign loanwords and modern Japanese.' },
   ];
 
   const totalScore = Object.values(progress).reduce((acc, p) => acc + (p.score || 0), 0);
@@ -24,13 +24,14 @@ const Home = () => {
       <div className="hero-banner">
         <div className="hero-text">
           <h1 className="hero-title">日本語 学習ガイド</h1>
-          <p className="hero-subtitle">Welcome to Japanese Self-Study Guide</p>
-          <p className="hero-desc">Your ultimate interactive platform for mastering Hiragana, Katakana, Vocabulary, Kanji, and JLPT Exams!</p>
+          <p className="hero-subtitle">JLPT Self-Study & Exam Preparation Platform</p>
+          <p className="hero-desc">Your ultimate interactive platform for mastering Hiragana, Katakana, Vocabulary, Kanji, and authentic JLPT N1–N5 Exam Past Questions (過去問)!</p>
           <div className="hero-badges">
-            <span className="badge-level n5">N5</span>
-            <span className="badge-level n4">N4</span>
-            <span className="badge-level n3">N3</span>
-            <span className="badge-level n2">N2</span>
+            <span className="badge-level n1">N1 上級</span>
+            <span className="badge-level n2">N2 中上級</span>
+            <span className="badge-level n3">N3 中級</span>
+            <span className="badge-level n4">N4 初級</span>
+            <span className="badge-level n5">N5 入門</span>
           </div>
         </div>
         <div className="hero-char">日</div>
@@ -70,15 +71,14 @@ const Home = () => {
         })}
       </div>
 
-      {/* Tips */}
+      {/* Recommendations */}
       <div className="tips-box">
-        <h5>💡 Study Recommendations</h5>
+        <h5>💡 Recommended Study Route for JLPT Success</h5>
         <ul>
-          <li>Start with <strong>Hiragana</strong> & <strong>Katakana</strong> to build your Japanese reading foundation.</li>
-          <li>Review <strong>Vocabulary</strong> and <strong>Grammar</strong> with interactive flashcards.</li>
-          <li>Take the <strong>Kanji Quiz</strong> to master JLPT character readings.</li>
-          <li>Practice <strong>Listening</strong> with Japanese native audio playback.</li>
-          <li>Challenge yourself with simulated <strong>Exam Practice</strong> to get exam-ready!</li>
+          <li><strong>Beginners (N5/N4):</strong> Start with <strong>Hiragana</strong> & <strong>Katakana</strong> charts with audio, then build essential daily vocabulary and basic particles.</li>
+          <li><strong>Intermediate (N3):</strong> Solidify complex verb conjugations, intermediate vocabulary, and transition into authentic reading passages.</li>
+          <li><strong>Advanced (N2/N1):</strong> Focus on <strong>JLPT Past Questions (過去問)</strong> and nuanced grammar patterns (such as <em>〜たるもの, 〜まじき, 〜余儀なくされる</em>) with thorough explanations.</li>
+          <li><strong>All Levels:</strong> Test your skills under real test pressure using our <strong>Timed Mock Exam</strong> mode!</li>
         </ul>
       </div>
     </div>
